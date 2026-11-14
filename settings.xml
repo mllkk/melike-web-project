@@ -1,0 +1,33 @@
+<settings>
+    <servers>
+    <server>
+        <id>melike-melike-cicd</id>
+        <username>aws</username>
+        <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+    </server>
+    </servers>
+
+    <profiles>
+    <profile>
+        <id>melike-melike-cicd</id>
+        <activation>
+        <activeByDefault>true</activeByDefault>
+        </activation>
+        <repositories>
+        <repository>
+            <id>melike-melike-cicd</id>
+            <url>https://melike-017164420102.d.codeartifact.us-east-2.amazonaws.com/maven/melike-cicd/</url>
+        </repository>
+        </repositories>
+    </profile>
+    </profiles>
+
+    <mirrors>
+    <mirror>
+        <id>melike-melike-cicd</id>
+        <name>melike-melike-cicd</name>
+        <url>https://melike-017164420102.d.codeartifact.us-east-2.amazonaws.com/maven/melike-cicd/</url>
+        <mirrorOf>*</mirrorOf>
+    </mirror>
+    </mirrors>
+</settings>
